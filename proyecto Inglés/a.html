@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fintrackr - Guides</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        #col0 {
+            text-align: center;
+            padding: 20px;
+        }
+
+        #col1 {
+            background: linear-gradient(45deg, #3498db);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .Tit {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 36px;
+            background: linear-gradient(45deg, #1aa9bc, #3498db);
+            color: #fff;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 10px;
+            text-transform: uppercase;
+        }
+
+        .enlace-b {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s;
+            cursor: pointer;
+            margin: 0 10px;
+            text-decoration: none;
+        }
+
+        .enlace-b:hover {
+            background-color: #4a637b;
+            transform: scale(1.1);
+        }
+
+        .enlace-b.guia {
+            padding: 15px 40px;
+        }
+
+        .enlace-b.guia:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        .cuadro-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px; 
+        }
+
+        .cuadro {
+            width: 300px;
+            height: 250px;
+            background-color: #2c3e50;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            margin: 20px;
+            position: relative;
+        }
+
+        .texto-sobresale {
+            font-size: 18px;
+            background-color: #fff;
+            color: #000;
+            padding: 20px 10px;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            width: 200px;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .texto-sobresale:hover {
+            background-color: #fff;
+            transform: scale(1.1);
+        }
+
+        .guia-list,
+        .js-list,
+        .otro-list {
+            display: none;
+            padding: 20px;
+            text-align: left;
+            background-color: #fff;
+            color: #000;
+            border-radius: 10px;
+            margin-top: 10px;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            width: 400px;
+        }
+
+        .cuadro.active .guia-list,
+        .cuadro.active .js-list,
+        .cuadro.active .otro-list {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="row">
+        <div id="col0" class="col-12">
+            <img src="err.png"  style="width: 200px;">
+        </div>
+    </div>
+
+    <div class="row">
+        <div id="col1" class="col-12">
+            <h1 class="Tit">FINTRACKR</h1>
+            <a href="index.html" class="enlace-b">HOME</a>
+            <a href="a.html" class="enlace-b ">GUIDE</a>
+            <a href="b.html" class="enlace-b">FINANCIAL TIPS</a>
+            <a href="c.html" class="enlace-b">DOWNLOAD THE APP</a>
+            <a href="d.html" class="enlace-b">ABOUT US</a>
+            <a href="..\guia.html" class="enlace-b">ESP - FINTRACKR</a>
+        </div>
+    </div>
+    <div class="row">
+        <div id="col4" class="col-12">
+            <div class="container">
+                <div id="guia-container" class="descripcion">
+                    <h1 class="animate-text animate__animated animate__fadeInUp">Guides for Proper Use of Fintrackr</h1>
+                    <div class="cuadro-container">
+                        <div class="cuadro" onclick="toggleGuia(this)">
+                            <h2 class="texto-sobresale">How does registration work?</h2>
+                            <div class="guia-list">
+                                <img src="n.jpeg" alt="Registration Image" style="max-width: 100%; height: auto;">
+                                <p>If you do not have a registered account, the "Register User" button takes us to the next screen, where the data of a new client is registered.</p>
+                            </div>
+                        </div>
+                        <div class="cuadro" onclick="toggleGuia(this)">
+                            <h2 class="texto-sobresale">How does the daily book work?</h2>
+                            <div class="js-list">
+                                <img src="d.jpeg" alt="Daily Book Image" style="max-width: 100%; height: auto;">
+                                <p>This is the first screen within the application, with four important sections:
+                                    <br>1. Sidebar of options: navigate to different screens.
+                                    <br>2. Savings: quick access to the savings registration function.
+                                    <br>3. Pending Payments: Sector that allows viewing and adding pending transactions and then marking them as completed, to maintain organization.
+                                    <br>4. Budgets: Direct access to the function of adding budgets for different functionalities
+                                    </p>
+                                    <img src="f.jpeg" alt="Daily Book Image" style="max-width: 100%; height: auto;">
+                                  
+                                    <p> Clicking the "Add" button in the Daily Book section or in the Savings section takes us to the screen where the information to be registered is entered.</p>
+                                    <img src="o.jpeg" alt="Daily Book Image" style="max-width: 100%; height: auto;">
+                                    <p> Within the sidebar is the Daily Book screen, in this section, transactions registered are detailed, separated by category.</p>
+                                </div>
+                        
+                        </div>
+                        <div class="cuadro" onclick="toggleGuia(this)">
+                            <h2 class="texto-sobresale">How do Savings and Budgets work?</h2>
+                            <div class="otro-list">
+                                <img src="p.jpeg" alt="Savings Image" style="max-width: 100%; height: auto;">
+                                <p>In the next section of the sidebar, access is gained to Savings and Budgets. In savings, it is possible to update the amount saved and reverse (or delete) the savings so that it can be stored again in the system as income.</p>
+                                <img src="e.jpeg" alt="Savings Image" style="max-width: 100%; height: auto;">
+                                <p>Clicking on Reverse opens the following screen to confirm the transferred data.</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <script>
+        function toggleGuia(element) {
+            document.querySelectorAll('.cuadro.active').forEach(function (el) {
+                if (el !== element) {
+                    el.classList.remove('active');
+                }
+            });
+            element.classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>
